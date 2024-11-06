@@ -1,0 +1,12 @@
+<div class="chat-container">
+  <div class="messages" #messagesContainer>
+    <div *ngFor="let message of conversation"  [ngClass]="message.role">
+      <markdown>{{ message.content }}</markdown>
+    </div>
+  </div>
+  <button class="scroll-to-bottom" (click)="scrollToBottom()">&#8595;</button>
+  <form (submit)="sendMessage($event, messageInput.value)">
+    <textarea #messageInput placeholder="Ecrire ici ..." [(ngModel)]="userMessage" name="userMessage" (keydown.enter)="handleEnterKey($event)"></textarea>
+    <button type="submit">Envoyer</button>
+  </form>
+</div>
