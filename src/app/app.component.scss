@@ -1,0 +1,116 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Prend toute la hauteur de la fenêtre */
+}
+
+.chat-container {
+  flex: 1; /* Prend tout l'espace vertical restant */
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  font-family: 'Roboto', sans-serif;
+  margin: 0; /* Pas de marge pour s'étendre sur toute la page */
+}
+
+.messages {
+  flex: 1; /* Permet aux messages de s'étendre */
+  overflow-y: auto;
+  padding-bottom: 10px;
+}
+
+.homeTextContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #f4f4f4; /* Couleur d'arrière-plan pour le message d'accueil */
+}
+
+.textHome {
+  font-size: 25px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+textarea {
+  padding: 10px;
+  border: none;
+  flex-grow: 1;
+  resize: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  outline: none;
+}
+
+textarea::placeholder {
+  color: #aaaaaa;
+}
+
+.send-button {
+  background-color: #8abf0e;
+  color: #fff;
+  border: none;
+  padding: 10px 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.send-button i {
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.send-button:hover i {
+  color: #d4d4d4;
+}
+
+.user,
+.assistant,
+.error {
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.footer{
+  margin-top: 10px;
+}
+
+.user {
+  background-color: #e1e1e1;
+  color: #0d2e38;
+  align-self: flex-end; /* Aligne les messages de l'utilisateur à droite */
+}
+
+.assistant {
+  background-color: #848484;
+  color: #ffffff;
+  align-self: flex-start; /* Aligne les messages de l'assistant à gauche */
+}
+
+.error {
+  background-color: #f8d7da;
+  color: #721c24;
+}

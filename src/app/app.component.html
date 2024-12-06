@@ -1,0 +1,26 @@
+<div>
+  <div class="homeTextContainer">
+    <span class="textHome">
+      Bonjour et Bienvenue dans votre plateforme AGRI 4 IA. 
+    </span>
+  </div>
+  <div class="chat-container">
+    <div class="messages" #messagesContainer>
+      <div *ngFor="let message of conversation" [ngClass]="message.role">
+        <markdown>{{ message.content }}</markdown>
+      </div>
+    </div>
+    <form class="message-form" (submit)="sendMessage($event, messageInput.value)">
+      <div class="input-container">
+        <textarea
+          #messageInput
+          placeholder="Posez votre question ici ..."
+          [(ngModel)]="userMessage"
+          name="userMessage"
+          (keydown.enter)="handleEnterKey($event)"
+        ></textarea>
+        <button type="submit" class="send-button">
+          <i class="fas fa-paper-plane"></i>
+        </button>
+      </div>
+    </form>

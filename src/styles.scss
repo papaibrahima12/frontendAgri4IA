@@ -1,0 +1,49 @@
+html, body {
+  background-color: white;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+}
+
+.messages::-webkit-scrollbar {
+  width: 6px;
+  background-color: #2c2c2c;
+}
+
+.messages::-webkit-scrollbar-thumb {
+  background-color: #6a6a6a;
+  border-radius: 3px;
+}
+
+.messages {
+  scrollbar-width: thin;
+  scrollbar-color: #6a6a6a #2c2c2c;
+  scroll-behavior: smooth;
+}
+
+app-root {
+  flex: 1;
+}
+
+.footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 20px;
+  background-color: #789436;
+  padding: 3% 0;
+}
+
+.textFooter{
+  text-align: center;
+  color: white;
+}
+
+.header-logo img {
+  width: 20%;
+  height: auto;
+  margin-left: 40%;
+}
